@@ -144,13 +144,8 @@ export function useProjects() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // Simulate API call delay
-    const timer = setTimeout(() => {
-      setProjects(sampleProjects)
-      setLoading(false)
-    }, 1000)
-
-    return () => clearTimeout(timer)
+    setProjects(sampleProjects)
+    setLoading(false)
   }, [])
 
   const getProjectsByCategory = (category: string) => {

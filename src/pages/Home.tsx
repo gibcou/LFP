@@ -20,6 +20,7 @@ const Home: React.FC = () => {
           title="Longhorn Film Productions"
           subtitle="Crafting Cinematic Stories That Captivate Audiences"
           ctaText="View Our Work"
+          backgroundImage="/assets/story-austin.jpg"
         />
         
         <section id="projects" className="bg-stone-950">

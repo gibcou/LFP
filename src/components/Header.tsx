@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 interface HeaderProps {
@@ -44,10 +45,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'dark' }) => {
 
           <nav className={`hidden md:flex space-x-8 ${isDark ? 'uppercase tracking-widest' : ''}`}>
             {navItems.map((item) => (
-              <motion.a
+              <Link
                 key={item.name}
-                href={item.href}
-                whileHover={{ y: -2 }}
+                to={item.href}
                 className={`${
                   isDark 
                     ? 'text-white/90 hover:text-white' 
@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'dark' }) => {
                 } transition-colors duration-200 font-medium`}
               >
                 {item.name}
-              </motion.a>
+              </Link>
             ))}
           </nav>
 
@@ -76,9 +76,9 @@ const Header: React.FC<HeaderProps> = ({ variant = 'dark' }) => {
           >
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
+                  to={item.href}
                   className={`block px-4 py-2 ${
                     isDark 
                       ? 'text-white/90 hover:text-white hover:bg-stone-900' 
@@ -87,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ variant = 'dark' }) => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>

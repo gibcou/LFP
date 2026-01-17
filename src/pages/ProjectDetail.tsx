@@ -35,6 +35,8 @@ const ProjectDetail: React.FC = () => {
                   src={project.thumbnail_url}
                   alt={project.title}
                   className="max-h-[720px] max-w-full h-auto w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div>

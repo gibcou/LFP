@@ -20,40 +20,32 @@ Julie is the founder and head producer of Longhorn Film Productions, an Austin b
   },
   {
     id: '2',
-    name: 'Michael Rodriguez',
-    role: 'Director of Photography',
-    bio: 'Michael is an award-winning cinematographer with a passion for creating stunning visual narratives. His expertise spans from commercial work to feature films, with a keen eye for lighting and composition that brings stories to life.',
-    headshot_url: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20male%20cinematographer%20headshot%20artistic%20professional%20lighting&image_size=square_hd',
-    linkedin_url: 'https://linkedin.com/in/michaelrodriguez',
+    name: 'Kandy Bagley',
+    role: 'PRODUCER',
+    bio: `Kandy Bagley raised in the small town of Hereford, Texas, where she embraced the uncomplicated joys of rural life. Surrounded by scenic beauty of the West Texas Panhandle, she flourished in an atmosphere that nurtured her creativity. However, her family's decision to move to Dallas when she was a teen transformed a new chapter in her life. This shift not only broadened her horizons but also sparked her profound passion for a career in the entertainment industry right after completing her education.
+Over the years, Kandy has made a name for herself by appearing in various television series, with her role in Walker, Texas Ranger standing out as a highlight of her early career. She also gained recognition as a Knockout Girl on the PCW (Professional Championship Wrestling) Show, where her vibrant personality and enthusiasm captivated fans. Kandy has demonstrated her versatility within the industry, successfully taking on roles as a model, actress, and script supervisor. Currently, she serves as a producer for Longhorn Film Productions and Snakebite Entertainment, contributing significantly to the development of creative projects.`,
+    headshot_url: '/assets/bio/Kandy-hs.png',
     display_order: 2
   },
   {
     id: '3',
-    name: 'Emily Chen',
-    role: 'Producer',
-    bio: 'Emily has produced over 50 projects ranging from commercials to documentaries. Her organizational skills and industry knowledge ensure every production runs smoothly, on time, and within budget while maintaining the highest creative standards.',
-    headshot_url: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20female%20film%20producer%20headshot%20organized%20professional%20lighting&image_size=square_hd',
-    linkedin_url: 'https://linkedin.com/in/emilychen',
+    name: 'John Taylor',
+    role: 'EXECUTIVE PRODUCER',
+    bio: `John E. Taylor has over 25 years of experience in project management, communications and as an IT specialist. John has written, produced, and recorded voice-overs for more than 200 productions including commercials, product evaluations and instructional videos.
+
+John was brought on as an Executive Producer for Longhorn Film Productions, LLC. to collaborate with owner/producer Julie Campbell to create, develop, produce, and distribute independent feature ﬁlm and television projects. He is developing his ﬁrst feature ﬁlm entitled “American Promise” based on the real lives of Army Nurses in the time of war, a subject very dear to him. With his skills of being an IT Specialist, Project Management, and his love of ﬁlm John looks forward to this chapter of his life.`,
+    headshot_url: '/assets/bio/John-Taylor-hs.jpeg',
     display_order: 3
   },
   {
     id: '4',
-    name: 'David Thompson',
-    role: 'Editor & Post-Production',
-    bio: 'David specializes in crafting compelling narratives through expert editing. With expertise in Adobe Premiere Pro, DaVinci Resolve, and After Effects, he transforms raw footage into polished, engaging content that captivates audiences.',
-    headshot_url: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20male%20film%20editor%20headshot%20creative%20professional%20lighting&image_size=square_hd',
-    linkedin_url: 'https://linkedin.com/in/davidthompson',
+    name: 'Jimmy Mathews',
+    role: 'PRODUCER',
+    bio: 'need info',
+    headshot_url: '/assets/bio/Jimmy-hs.png',
     display_order: 4
   },
-  {
-    id: '5',
-    name: 'Lisa Martinez',
-    role: 'Sound Designer',
-    bio: 'Lisa brings over 8 years of experience in audio production and sound design. Her work spans from dialogue editing and ADR to creating immersive soundscapes that enhance the emotional impact of every project she works on.',
-    headshot_url: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20female%20sound%20designer%20headshot%20artistic%20professional%20lighting&image_size=square_hd',
-    linkedin_url: 'https://linkedin.com/in/lisamartinez',
-    display_order: 5
-  }
+  
 ]
 
 export function useTeamMembers() {
@@ -62,13 +54,8 @@ export function useTeamMembers() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    // Simulate API call delay
-    const timer = setTimeout(() => {
-      setTeamMembers(sampleTeamMembers)
-      setLoading(false)
-    }, 1000)
-
-    return () => clearTimeout(timer)
+    setTeamMembers(sampleTeamMembers)
+    setLoading(false)
   }, [])
 
   return {

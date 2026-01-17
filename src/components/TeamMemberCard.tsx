@@ -21,6 +21,8 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
             src={member.headshot_url}
             alt={member.name}
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
           
         </div>
@@ -34,7 +36,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
             {member.role}
           </p>
           
-          {member.name !== 'Julie Campbell' && (
+          {member.name !== 'Julie Campbell' && member.name !== 'Kandy Bagley' && member.name !== 'John Taylor' && member.name !== 'Jimmy Mathews' && (
             <p className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
               {member.bio}
             </p>
@@ -61,6 +63,8 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
                   src={member.headshot_url}
                   alt={member.name}
                   className="max-h-[520px] max-w-full h-auto w-auto object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="flex flex-col">
