@@ -5,11 +5,17 @@ import { TeamMember } from '../lib/supabase'
 const sampleTeamMembers: TeamMember[] = [
   {
     id: '1',
-    name: 'Sarah Johnson',
-    role: 'Creative Director',
-    bio: 'With over 12 years of experience in film and commercial production, Sarah brings a unique vision and storytelling expertise to every project. Her work has been featured at major film festivals and she has directed campaigns for Fortune 500 companies.',
-    headshot_url: 'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20female%20creative%20director%20headshot%20confident%20professional%20lighting&image_size=square_hd',
-    linkedin_url: 'https://linkedin.com/in/sarahjohnson',
+    name: 'Julie Campbell',
+    role: 'FOUNDER/PRODUCER',
+    bio: `Julie Campbell has been a television and film producer for over twenty-five years. She worked as a producer, account executive and legal consultant for 10 years in Boston. In 1998 she produced her first feature film, a romantic comedy “Urban Relics” starring Frank Sivero and Richard Romanus.
+
+In 2010, she relocated to Austin, Texas to work on feature films, consulting, developing, and collaborating on several independent film projects. In 2012, Julie worked closely as the head producer on the western comedy “One Lucky Moon” written and directed by the late Peter Bogdanovich, who passed away in 2022. Collaborating with Peter for the last 10 years was an honor, and experience of a lifetime…
+
+March 2024, she wrapped post – production on “The Caller Returns” a psychological thriller, which she was the head producer. Her next feature film is a heartfelt comedy “Standby” written and directed by Ian Harris, starring Sean Astin and John Cleese, filming this summer 2024, in Los Angeles.
+
+Julie is the founder and head producer of Longhorn Film Productions, an Austin based production company focusing on Independent Films and original Television Series. She is a production partner with acclaimed screenwriter Thomas E. Kelly, known for his westerns scripts which she & (LFP) will develop into indie films or television series. She is a signatory producer with the Writer’s Guild of America and a member of Women in Film, LA.`,
+    headshot_url: '/assets/bio/Julie-hs.png',
+    linkedin_url: 'https://linkedin.com/in/juliecampbell',
     display_order: 1
   },
   {

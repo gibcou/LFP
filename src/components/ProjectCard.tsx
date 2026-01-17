@@ -17,11 +17,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
       onClick={onClick}
     >
       <div className="relative overflow-hidden rounded-lg bg-black">
-        <div className="aspect-video relative">
+        <div className="relative min-h-[420px] flex items-center justify-center bg-black">
           <img
             src={project.thumbnail_url}
             alt={project.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            className="max-h-[560px] max-w-full h-auto w-auto object-contain"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -37,9 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
         
         <div className="p-6 bg-stone-900">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-sm font-medium text-red-500 uppercase tracking-wide">
-              {project.category}
-            </span>
+            <span className="text-sm font-medium text-red-500 uppercase tracking-wide">Film</span>
             <span className="text-sm text-gray-400">{project.year}</span>
           </div>
           
@@ -52,21 +50,22 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, onClick }) => {
           </p>
           
           <div className="flex items-center justify-between">
-            <span className="text-sm text-gray-400">
-              Client: {project.client}
-            </span>
-            {project.trailer_url && (
-              <motion.a
-                href={project.trailer_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.1 }}
-                className="text-red-500 hover:text-red-400"
-                onClick={(e) => e.stopPropagation()}
-              >
-                <ExternalLink className="w-4 h-4" />
-              </motion.a>
-            )}
+            <span className="text-sm text-gray-400">Client: {project.client}</span>
+            <div className="flex items-center gap-3">
+              {project.trailer_url && (
+                <motion.a
+                  href={project.trailer_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  className="text-red-500 hover:text-red-400"
+                  onClick={(e) => e.stopPropagation()}
+                  aria-label="Open Trailer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </motion.a>
+              )}
+            </div>
           </div>
         </div>
       </div>

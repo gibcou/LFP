@@ -47,22 +47,37 @@ const About: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
                 <div className="space-y-4 text-gray-300">
                   <p>
-                    Founded in Austin, Texas, Longhorn Film Productions began as a small team of passionate filmmakers with a vision to create impactful visual content. Over the past 15 years, we've grown into a full-service production company while maintaining our commitment to storytelling excellence.
+                    Longhorn Film Productions is an independent feature film and original television series production company. LFP is comprised of experienced industry professionals dedicated to producing top quality feature films for theatrical distribution. Our ongoing success stems from making a wide variety of films – from strong character driven stories, prestigious dramas, romantic comedies, psychological thrillers, and wholesome family entertainment.
                   </p>
                   <p>
-                    Our name reflects our Texas roots and the strength, determination, and authenticity we bring to every project. We believe in the power of visual storytelling to inspire, educate, and entertain.
+                    LFP believes that a good story, well told, can have a profound influence on its viewing audience. We engage in all aspects of the expanding entertainment industry, from concept through distribution. LFP collaborates with other production companies, and filmmakers globally using state-of-the-art technology, thereby creating a diversified entertainment company.
                   </p>
                   <p>
-                    From our first commercial shoot to our latest feature film, we've remained dedicated to pushing creative boundaries and delivering exceptional results for our clients.
+                    Our goal is to fund most of our development and packaging costs, allowing us to retain creative control of our projects. LFP is committed to producing quality films and television shows that entertain, educate and inspire from all genres, to create an awareness and sensitivity to real life and timely social issues in hopes of making this a better world…
                   </p>
                 </div>
               </div>
               
               <div className="relative">
                 <img
-                  src="https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=film%20production%20studio%20with%20camera%20equipment%20professional%20lighting%20setup%20cinematic%20atmosphere%20dark%20background&image_size=portrait_4_3"
-                  alt="Film Production Studio"
-                  className="rounded-lg shadow-2xl"
+                  src="/assets/story-austin.jpg"
+                  alt="Austin skyline and river reflecting cityscape"
+                  className="rounded-lg shadow-2xl object-cover w-full"
+                  onError={(e) => {
+                    const el = e.currentTarget as HTMLImageElement;
+                    const candidates = [
+                      '/assets/story-austin.png',
+                      '/assets/story-austin.jpeg',
+                      'https://trae-api-us.mchost.guru/api/ide/v1/text_to_image?prompt=film%20production%20studio%20with%20camera%20equipment%20professional%20lighting%20setup%20cinematic%20atmosphere%20dark%20background&image_size=portrait_4_3'
+                    ];
+                    const tries = (el.dataset.tries && parseInt(el.dataset.tries)) || 0;
+                    if (tries < candidates.length) {
+                      el.src = candidates[tries];
+                      el.dataset.tries = String(tries + 1);
+                    } else {
+                      el.style.display = 'none';
+                    }
+                  }}
                 />
               </div>
             </div>

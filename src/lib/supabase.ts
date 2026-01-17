@@ -8,9 +8,26 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 export interface Project {
   id: string
   title: string
-  category: 'commercial' | 'narrative' | 'documentary'
+  category?: string
   thumbnail_url: string
   trailer_url: string
+  overview_url?: string
+  synopsis?: string
+  genre?: string
+  screenwriter?: string
+  producers?: string
+  executive_producers?: string
+  status?: string
+  seeking?: string
+  tagline?: string
+  director?: string
+  vfx?: string
+  cast?: string
+  budget?: string
+  location?: string
+  filming?: string
+  production_companies?: string
+  imdb_url?: string
   description: string
   client: string
   year: number

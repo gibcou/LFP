@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import ProjectGrid from '../components/ProjectGrid';
 import { motion } from 'framer-motion';
 import { useProjects } from '../hooks/useProjects';
+import UpcomingSection from '../components/UpcomingSection';
 
 const Projects: React.FC = () => {
   const { projects, loading, error } = useProjects();
@@ -40,7 +41,10 @@ const Projects: React.FC = () => {
             <p className="text-red-500 text-lg">Error loading projects: {error}</p>
           </div>
         ) : (
-          <ProjectGrid projects={projects} />
+          <>
+            <UpcomingSection projects={projects} />
+            <ProjectGrid projects={projects} />
+          </>
         )}
       </main>
       <Footer />
