@@ -12,3 +12,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.trae-solo-badge,
+#trae-solo-badge,
+[class*="trae-badge"],
+[id*="trae-badge"],
+a[href*="trae.ai"] {
+  display: none !important;
+}
