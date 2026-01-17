@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Instagram, Linkedin } from 'lucide-react';
@@ -137,6 +138,7 @@ const Contact: React.FC = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

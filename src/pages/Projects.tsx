@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import ProjectGrid from '../components/ProjectGrid';
 import { motion } from 'framer-motion';
 import { useProjects } from '../hooks/useProjects';
@@ -42,6 +43,7 @@ const Projects: React.FC = () => {
           <ProjectGrid projects={projects} />
         )}
       </main>
+      <Footer />
     </div>
   );
 };

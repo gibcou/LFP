@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import TeamMemberCard from '../components/TeamMemberCard';
 import { motion } from 'framer-motion';
 import { useTeamMembers } from '../hooks/useTeamMembers';
@@ -144,6 +145,7 @@ const About: React.FC = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };
